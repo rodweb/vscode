@@ -1,0 +1,81 @@
+{
+  "editor.accessibilitySupport": "off",
+  "editor.minimap.enabled": false,
+  "workbench.editor.showTabs": false,
+  "workbench.colorTheme": "Default Dark+ Experimental",
+  "workbench.statusBar.visible": false,
+  "workbench.tips.enabled": false,
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "b"],
+      "commands": [
+        "workbench.action.openRecent"
+      ]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": ["<leader>", "g"],
+      "commands": [
+        "workbench.view.scm"
+      ]
+    },
+    {
+      "before": ["<leader>", "k"],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
+    },
+    {
+      "before": ["<leader>", "o"],
+      "commands": [
+        "workbench.action.closeOtherEditors"
+      ]
+    },
+    {
+      "before": ["<leader>", "s"],
+      "commands": [
+        "workbench.action.files.save"
+      ]
+    },
+    {
+      "before": ["<leader>", "w"],
+      "commands": [
+        "workbench.action.focusOtherSideEditor"
+      ]
+    },
+    {
+      "before": ["<leader>", "/"],
+      "commands": [
+        "workbench.action.findInFiles"
+      ]
+    },
+    {
+      "before": ["escape", "escape"],
+      "when": "inSearchEditor",
+      "commands": [
+        "workbench.action.toggleSidebarVisibility"
+      ]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false
+  }
+}
