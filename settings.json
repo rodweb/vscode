@@ -5,7 +5,7 @@
   "workbench.colorTheme": "Default Dark+ Experimental",
   "workbench.editor.showTabs": false,
   "workbench.activityBar.visible": false,
-  "workbench.statusBar.visible": false
+  "workbench.statusBar.visible": false,
   "vim.smartRelativeLine": true,
   "vim.easymotion": true,
   "vim.incsearch": true,
@@ -155,6 +155,13 @@
       "commands": [
         "editor.action.dirtydiff.next"
       ]
+    },
+    {
+      "before": ["]", "c"],
+      "commands": [
+        "workbench.action.compareEditor.nextChange"
+      ],
+      "when": "textCompareEditorVisible"
     },
     {
       "before": ["<leader>", "/"],
