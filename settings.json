@@ -1,10 +1,12 @@
 {
   "editor.accessibilitySupport": "off",
   "editor.minimap.enabled": false,
-  "workbench.editor.showTabs": false,
-  "workbench.colorTheme": "Default Dark+ Experimental",
-  "workbench.statusBar.visible": false,
   "workbench.tips.enabled": false,
+  "workbench.colorTheme": "Default Dark+ Experimental",
+  "workbench.editor.showTabs": false,
+  "workbench.activityBar.visible": false,
+  "workbench.statusBar.visible": false
+  "vim.smartRelativeLine": true,
   "vim.easymotion": true,
   "vim.incsearch": true,
   "vim.useSystemClipboard": true,
@@ -18,9 +20,38 @@
   ],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["K"],
+      "commands": [
+        "editor.action.showHover"
+      ],
+      "silent": true
+    },
+    {
+      "before": ["g", "r"],
+      "commands": [
+        "editor.action.goToReferences"
+      ]
+    },
+    {
+      "before": ["<leader>", "space"],
+      "commands": [
+        "workbench.action.showCommands"
+      ]
+    },
+    {
       "before": ["<leader>", "b"],
       "commands": [
         "workbench.action.openRecent"
+      ]
+    },
+    {
+      "before": ["<leader>", "c", "c"],
+      "commands": [
+        "workbench.action.tasks.runTask"
       ]
     },
     {
@@ -42,9 +73,21 @@
       ]
     },
     {
+      "before": ["<leader>", "l"],
+      "commands": [
+        "workbench.action.gotoSymbol"
+      ]
+    },
+    {
       "before": ["<leader>", "o"],
       "commands": [
-        "workbench.action.closeOtherEditors"
+        "workbench.action.closeEditorsInOtherGroups"
+      ]
+    },
+    {
+      "before": ["<leader>", "r"],
+      "commands": [
+        "editor.action.rename"
       ]
     },
     {
@@ -54,9 +97,63 @@
       ]
     },
     {
+      "before": ["<leader>", "t", "t"],
+      "commands": [
+        "testing.runAtCursor"
+      ]
+    },
+    {
+      "before": ["<leader>", "t", "f"],
+      "commands": [
+        "testing.runCurrentFile"
+      ]
+    },
+    {
+      "before": ["<leader>", "t", "d", "d"],
+      "commands": [
+        "testing.debugAtCursor"
+      ]
+    },
+    {
+      "before": ["<leader>", "t", "d", "f"],
+      "commands": [
+        "testing.debugCurrentFile"
+      ]
+    },
+    {
       "before": ["<leader>", "w"],
       "commands": [
         "workbench.action.focusOtherSideEditor"
+      ]
+    },
+    {
+      "before": ["]", "e"],
+      "commands": [
+        "editor.action.marker.nextInFiles"
+      ]
+    },
+    {
+      "before": ["[", "e"],
+      "commands": [
+        "editor.action.marker.prevInFiles"
+      ]
+    },
+    {
+      "before": ["]", "e"],
+      "commands": [
+        "editor.action.marker.nextInFiles"
+      ]
+    },
+    {
+      "before": ["[", "c"],
+      "commands": [
+        "editor.action.dirtydiff.previous"
+      ]
+    },
+    {
+      "before": ["]", "c"],
+      "commands": [
+        "editor.action.dirtydiff.next"
       ]
     },
     {
@@ -66,10 +163,16 @@
       ]
     },
     {
-      "before": ["escape", "escape"],
-      "when": "inSearchEditor",
+      "before": ["<leader>", "="],
       "commands": [
-        "workbench.action.toggleSidebarVisibility"
+        "editor.action.formatDocument"
+      ]
+    },
+    {
+      "before": ["<leader>", "tab"],
+      "commands": [
+        "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+        "list.select"
       ]
     }
   ],
